@@ -12,7 +12,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Get reference to download buttons
-        val downloadButtons = mutableMapOf(1 to findViewById(R.id.downloadButton1GB) as Button)
-        downloadButtons[1]?.setOnClickListener ({  println("Button clicked!") })
+        val downloadButtons = mutableMapOf(1 to findViewById(R.id.downloadButton1GB),
+                2 to findViewById(R.id.downloadButton2GB),
+                4 to findViewById(R.id.downloadButton4GB))
+
+        // When a button is clicked, make it semi-transparent
+        for (i in downloadButtons.keys) {
+            downloadButtons[i]?.setOnClickListener ({
+                downloadButtons[i]?.alpha = 0.5.toFloat();
+                println("${i}GB button clicked!")
+            })
+        }
+
     }
 }
