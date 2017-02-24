@@ -11,27 +11,74 @@
     tools:context="com.example.morten.ramdownloader.MainActivity">
 
     <LinearLayout
+        android:id="@+id/row1GB"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="50dp">
 
-    <TextView
-        android:id="@+id/downloadText1GB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="@string/_1gb"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/downloadText1GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/_1gb"
+            android:padding="10dp"
+            />
 
-    <Button
-        android:id="@+id/downloadButton1GB"
-        android:layout_width="match_parent"
-        android:text="@string/download"
-        android:layout_height="50dp"
-
-        android:layout_toRightOf="@+id/downloadText1GB" />
-
+        <Button
+            android:id="@+id/downloadButton1GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText1GB"
+            tools:ignore="ObsoleteLayoutParam" />
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/row2GB"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row1GB">
+
+        <TextView
+            android:id="@+id/downloadText2GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/_2gb"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton2GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText2GB"
+            tools:ignore="ObsoleteLayoutParam" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row2GB">
+
+        <TextView
+            android:id="@+id/downloadText4GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/_4gb"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton4GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText4GB"
+            tools:ignore="ObsoleteLayoutParam" />
+
+    </LinearLayout>
+
 </RelativeLayout>

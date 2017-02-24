@@ -2,4 +2,6 @@
     <string name="app_name">RamDownloader</string>
     <string name="download">Download</string>
     <string name="_1gb">1GB</string>
+    <string name="_2gb">2GB</string>
+    <string name="_4gb">4GB</string>
 </resources>
