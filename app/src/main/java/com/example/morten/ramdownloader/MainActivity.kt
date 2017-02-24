@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
                 downloadButtons[i]?.alpha = 0.5.toFloat();
+                DownloadingPage(i);
                 println("${i}GB button clicked!")
                 // Restore button transparency after some time
                 // If button is clicked several times, the button turns non-transparent 1000ms after the first click
