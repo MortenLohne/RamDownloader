@@ -9,7 +9,7 @@ import com.example.morten.ramdownloader.R
 /**
  * Created by ady on 24/02/2017.
  */
-class DownloadingPage constructor(val GBsToDownload: Int) : AppCompatActivity()  {
+class DownloadingPage : AppCompatActivity()  {
 
     val mHandler = Handler()
     var status = 0
@@ -19,6 +19,8 @@ class DownloadingPage constructor(val GBsToDownload: Int) : AppCompatActivity() 
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        var GBsToDownload = intent.dataString as Int;
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button = findViewById(R.id.fasterDownloadButton)
@@ -28,7 +30,7 @@ class DownloadingPage constructor(val GBsToDownload: Int) : AppCompatActivity() 
             while (status < 100) {
                 status += 10
 
-                Thread.sleep(200)
+                Thread.sleep(200 * GBsToDownload as Long)
                 // Update the progress bar
                 mHandler.post { progressBar.progress = status }
             }

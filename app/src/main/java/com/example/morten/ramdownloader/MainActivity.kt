@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
                 downloadButtons[i]?.alpha = 0.5.toFloat();
-                val dlPage = DownloadingPage(i);
+                val dlPage = DownloadingPage();
                 var intent = Intent(this as Context, DownloadingPage::class.java)
-                intent.putExtra(i as String, i as Int)
+                intent.putExtra(i.toString(), i)
                 startActivityForResult(intent, 0)
                 println("${i}GB button clicked!")
                 // Restore button transparency after some time
