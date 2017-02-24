@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RamDownloader</string>
+    <string name="download">Download</string>
+    <string name="_1gb">1GB</string>
 </resources>
