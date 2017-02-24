@@ -19,7 +19,12 @@ class DownloadingPage : AppCompatActivity()  {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var GBsToDownload = intent.dataString as Int;
+        var GBsToDownload : Int = if (intent.dataString == "") {
+            intent.dataString.toInt()
+        }
+        else {
+            throw Exception("DownloadingPage's extra data was empty")
+        };
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
