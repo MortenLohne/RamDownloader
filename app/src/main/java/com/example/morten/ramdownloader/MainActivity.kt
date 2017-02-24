@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
                 downloadButtons[i]?.alpha = 0.5.toFloat();
                 println("${i}GB button clicked!")
                 // Restore button transparency after some time
+                // If button is clicked several times, the button turns non-transparent 1000ms after the first click
                 kotlin.concurrent.thread {
                     Thread.sleep(1000);
-                    // If button is clicked several times, the button turns non-transparent 1000ms after the first click
                     downloadButtons[i]?.alpha = 1.0.toFloat();
                 }
             })
