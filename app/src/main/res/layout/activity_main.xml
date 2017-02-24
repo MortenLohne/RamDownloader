@@ -17,6 +17,7 @@
         android:text="@string/choose_the_amount_of_ram"
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/textColor"
         />
 
     <LinearLayout
@@ -32,6 +33,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="@string/_1gb"
+            android:textColor="@color/textColor"
             android:padding="10dp"
             />
 
@@ -56,6 +58,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="@string/_2gb"
+            android:textColor="@color/textColor"
             android:padding="10dp"/>
 
         <Button
@@ -80,6 +83,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="@string/_4gb"
+            android:textColor="@color/textColor"
             android:padding="10dp"/>
 
         <Button
@@ -103,6 +107,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:text="@string/_8gb"
+            android:textColor="@color/textColor"
             android:padding="10dp"/>
 
         <Button
