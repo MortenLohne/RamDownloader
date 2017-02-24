@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
             downloadButtons[i]?.setOnClickListener ({
                 downloadButtons[i]?.alpha = 0.5.toFloat();
                 println("${i}GB button clicked!")
+                // Restore button transparency after some time
+                kotlin.concurrent.thread {
+                    Thread.sleep(1000);
+                    // If button is clicked several times, the button turns non-transparent 1000ms after the first click
+                    downloadButtons[i]?.alpha = 1.0.toFloat();
+                }
             })
         }
 
