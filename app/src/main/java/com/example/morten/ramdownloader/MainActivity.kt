@@ -1,5 +1,7 @@
 package com.example.morten.ramdownloader
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,14 +24,17 @@ class MainActivity : AppCompatActivity() {
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
                 downloadButtons[i]?.alpha = 0.5.toFloat();
-                DownloadingPage(i);
+                val dlPage = DownloadingPage(i);
+                var intent = Intent(this as Context, DownloadingPage::class.java)
+                intent.putExtra(i as String, i as Int)
+                startActivityForResult(intent, 0)
                 println("${i}GB button clicked!")
                 // Restore button transparency after some time
                 // If button is clicked several times, the button turns non-transparent 1000ms after the first click
                 kotlin.concurrent.thread {
                     Thread.sleep(1000);
                     downloadButtons[i]?.alpha = 1.0.toFloat();
-                }
+                }.start()
             })
         }
 
