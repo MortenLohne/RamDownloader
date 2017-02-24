@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         // Get reference to download buttons
         val downloadButtons = mutableMapOf(1 to findViewById(R.id.downloadButton1GB),
                 2 to findViewById(R.id.downloadButton2GB),
-                4 to findViewById(R.id.downloadButton4GB))
+                4 to findViewById(R.id.downloadButton4GB),
+                8 to findViewById(R.id.downloadButton8GB))
 
         // When a button is clicked, make it semi-transparent
         for (i in downloadButtons.keys) {
