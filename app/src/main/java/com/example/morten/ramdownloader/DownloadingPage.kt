@@ -19,11 +19,16 @@ class DownloadingPage : AppCompatActivity()  {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var GBsToDownload : Int = if (intent.dataString == "") {
-            intent.dataString.toInt()
+        var GBsToDownload : Int = if (intent.getIntExtra("size", 10) == 10) {
+            intent.getIntExtra("size", 10)
+
         }
         else {
-            throw Exception("DownloadingPage's extra data was empty")
+
+            //intent.getIntExtra("size", 10)
+            //throw Exception("DownloadingPage's extra data was empty")
+            println("DownloadingPage's extra data was empty, sending bogus data")
+            intent.getIntExtra("size", 10)
         };
 
         super.onCreate(savedInstanceState)
