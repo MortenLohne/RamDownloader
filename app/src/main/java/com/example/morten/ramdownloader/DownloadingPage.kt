@@ -34,7 +34,12 @@ class DownloadingPage : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button = findViewById(R.id.fasterDownloadButton)
-        val progressBar = findViewById(R.id.progressBar) as ProgressBar
+        val progressBar = if (findViewById(R.id.progressBar) != null) {
+            findViewById(R.id.progressBar) as ProgressBar
+        }
+        else {
+            throw Exception("ProgressBar view was null")
+        }
 
         button.setOnClickListener {
             status++
