@@ -26,6 +26,10 @@ class DownloadingPage : AppCompatActivity()  {
         val button = findViewById(R.id.fasterDownloadButton)
         val progressBar = findViewById(R.id.progressBar) as ProgressBar
 
+        button.setOnClickListener {
+            status++
+        }
+
         Thread(Runnable {
             while (status < 100) {
                 status += 10
