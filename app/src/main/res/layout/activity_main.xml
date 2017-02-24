@@ -10,11 +10,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.morten.ramdownloader.MainActivity">
 
+    <TextView
+        android:id="@+id/ramHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/choose_the_amount_of_ram"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        />
+
     <LinearLayout
         android:id="@+id/row1GB"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:layout_below="@+id/ramHeader">
 
         <TextView
             android:id="@+id/downloadText1GB"
@@ -59,6 +69,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/row4GB"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/row2GB">
@@ -80,5 +91,29 @@
             tools:ignore="ObsoleteLayoutParam" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row4GB">
+
+        <TextView
+            android:id="@+id/downloadText8GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/_8gb"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton8GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText4GB"
+            tools:ignore="ObsoleteLayoutParam" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

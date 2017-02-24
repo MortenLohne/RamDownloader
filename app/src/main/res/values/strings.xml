@@ -4,4 +4,6 @@
     <string name="_1gb">1GB</string>
     <string name="_2gb">2GB</string>
     <string name="_4gb">4GB</string>
+    <string name="choose_the_amount_of_ram">Choose the amount of RAM</string>
+    <string name="_8gb">8GB</string>
 </resources>
