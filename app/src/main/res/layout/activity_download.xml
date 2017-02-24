@@ -27,6 +27,7 @@
         android:textColor="@color/textColorWhite"/>
 
     <Button
+        android:id="@+id/fasterDownloadButton"
         android:layout_width="225dp"
         android:layout_height="225dp"
         android:text="@string/fast_download"
