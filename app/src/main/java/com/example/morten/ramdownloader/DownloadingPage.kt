@@ -1,11 +1,8 @@
 package com.example.morten.ramdownloader
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -56,7 +53,7 @@ class DownloadingPage : AppCompatActivity()  {
                     //button.setBackgroundColor(Color.RED)
                     button.setBackgroundResource(R.drawable.roundedbutton)
                 }
-                counter++;
+                counter++
                 if(GBsToDownload <= 8) {
                     status += 3.0 /  GBsToDownload.toDouble()
                     progressBar.progress = status.toInt()

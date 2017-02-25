@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
 /**
- * Created by ady on 25/02/2017.
+ * André stuff
  */
 
 class Trail : AppCompatActivity() {
