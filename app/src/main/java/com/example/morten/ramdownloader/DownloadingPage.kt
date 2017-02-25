@@ -32,35 +32,45 @@ class DownloadingPage : AppCompatActivity()  {
         }
 
         button.setOnClickListener {
-            status += 3.0 / GBsToDownload.toDouble()
+            if(GBsToDownload <= 8) {
+                status += 3.0 / GBsToDownload.toDouble()
+            }
+            else {
+                status += 12.0 / GBsToDownload.toDouble()
+            }
         }
 
         // Function that gets called regularly to update the progress bar
         fun updateProgressBar() {
             if (status < 100.0) {
-                status += 3.0 /  GBsToDownload.toDouble()
-                progressBar.progress = status.toInt()
-            if(GBsToDownload <= 8) {
-                text1.text =
-                when (status) {
-                    in 0..30 -> "Downloading RAM"
-                    in 30..55 -> "Installing Windows Phone"
-                    in 55..80 ->"Setting IE as default browser"
-                    in 80..95 -> "Removing Android"
-                    else -> "Complete"
+                if(GBsToDownload <= 8) {
+                    status += 3.0 /  GBsToDownload.toDouble()
+                    progressBar.progress = status.toInt()
+                    text1.text =
+                    when (status) {
+                        in 0..30 -> "Downloading RAM"
+                        in 30..55 -> "Installing Windows Phone"
+                        in 55..80 ->"Setting IE as default browser"
+                        in 80..95 -> "Removing Android"
+                        else -> "Complete"
+                    }
                 }
-            }
-            else {
-                text1.text =
-                when (status) {
-                    in 0..30 -> "Downloading storage"
-                    in 30..55 -> "rm -rf *"
-                    in 55..80 -> "rm -rf --no-preserve-root *"
-                    in 80..87 -> "Self destruct in: 3"
-                    in 80..94 -> "Self destruct in: 2"
-                    else -> "Self destruct in: 1"
+                else {
+                    status += 12.0 /  GBsToDownload.toDouble()
+                    progressBar.progress = status.toInt()
+                    text1.text =
+                    when (status) {
+                        in 0..15 -> "Downloading storage"
+                        in 15..30 -> "Enabling monadic quantum bits"
+                        in 40..55 -> "sudo rm -rf *"
+                        in 55..70 -> "sudo rm -rf --no-preserve-root *"
+                        in 70..80 -> "Removing Norton anti-virus"
+                        in 80..85 -> "Removing NSA"
+                        in 85..90 -> "Self destruct in: 3"
+                        in 90..94 -> "Self destruct in: 2"
+                        else -> "Self destruct in: 1"
+                    }
                 }
-            }
                 // Register the next update
                 mHandler.postDelayed({ updateProgressBar() }, 200)
             }
