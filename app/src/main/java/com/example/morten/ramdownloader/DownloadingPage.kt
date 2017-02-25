@@ -1,7 +1,10 @@
 package com.example.morten.ramdownloader
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
 import com.example.morten.ramdownloader.R
@@ -45,6 +48,10 @@ class DownloadingPage : AppCompatActivity()  {
                 // Update the progress bar
                 mHandler.post { progressBar.progress = status }
             }
+
+            val intent = Intent(this,MainActivity::class.java)
+            startActivityForResult(intent,2)
+
         }).start()
 
     }
