@@ -63,11 +63,18 @@ class DownloadingPage : AppCompatActivity()  {
                     text1.text = "Complete"
                 }
                 // Register the next update
-                mHandler.postDelayed(Runnable{ updateProgressBar() }, 200)
+                mHandler.postDelayed({ updateProgressBar() }, 200)
             }
             else {
-                val intent = Intent(this,MainActivity::class.java)
-                startActivityForResult(intent,2)
+                status += 1.0
+                // Display "Complete" for a bit before returning to main menu
+                if (status > 120.0) {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivityForResult(intent, 2)
+                }
+                else {
+                    mHandler.postDelayed({ updateProgressBar() }, 200)
+                }
             }
         }
         updateProgressBar();
