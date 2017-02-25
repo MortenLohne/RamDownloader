@@ -20,20 +20,13 @@ class MainActivity : AppCompatActivity() {
                 4 to findViewById(R.id.downloadButton4GB),
                 8 to findViewById(R.id.downloadButton8GB))
 
-        // When a button is clicked, make it semi-transparent
+        // When a button is clicked, switch to the download screen
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
-                downloadButtons[i]?.alpha = 0.5.toFloat();
                 var intent = Intent(this as Context, DownloadingPage::class.java)
                 intent.putExtra("size", i)
                 startActivityForResult(intent, 1)
                 println("${i}GB button clicked!")
-                // Restore button transparency after some time
-                // If button is clicked several times, the button turns non-transparent 1000ms after the first click
-                kotlin.concurrent.thread {
-                    Thread.sleep(1000);
-                    //downloadButtons[i]?.alpha = 1.0.toFloat();
-                }
             })
         }
 
