@@ -1,8 +1,11 @@
 package com.example.morten.ramdownloader
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -14,6 +17,7 @@ class DownloadingPage : AppCompatActivity()  {
 
     val mHandler = Handler()
     var status = 0.0
+    var counter : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -43,6 +47,16 @@ class DownloadingPage : AppCompatActivity()  {
         // Function that gets called regularly to update the progress bar
         fun updateProgressBar() {
             if (status < 100.0) {
+
+                if(counter % 4 == 0){
+                    //button.setBackgroundColor(Color.BLUE)
+                    button.setBackgroundResource(R.drawable.roundedbutton2)
+
+                } else if(counter % 2 == 0) {
+                    //button.setBackgroundColor(Color.RED)
+                    button.setBackgroundResource(R.drawable.roundedbutton)
+                }
+                counter++;
                 if(GBsToDownload <= 8) {
                     status += 3.0 /  GBsToDownload.toDouble()
                     progressBar.progress = status.toInt()
