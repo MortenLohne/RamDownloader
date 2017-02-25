@@ -34,7 +34,7 @@ class DownloadingPage : AppCompatActivity()  {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_download)
-        val text1 = findViewById(R.id.downloadingText)
+        val text1 = findViewById(R.id.downloadingText) as TextView
         val button = findViewById(R.id.fasterDownloadButton)
         val progressBar = if (findViewById(R.id.progressBar) != null) {
             findViewById(R.id.progressBar) as ProgressBar
@@ -53,10 +53,12 @@ class DownloadingPage : AppCompatActivity()  {
                 status += 3.0 /  GBsToDownload.toDouble()
                 progressBar.progress = status.toInt()
 
-
-                if (status > 30){
-                    text1.alpha = 0.0f
-                    button.alpha = 0.0f
+                if (status >= 30 && status < 60){
+                    text1.text = "Installing Windows Phone"
+                } else if(status >= 60 && status < 80){
+                    text1.text = "Set IE as default browser"
+                } else if(status >= 80){
+                    text1.text = "Removing Android"
                 }
                 // Register the next update
                 mHandler.postDelayed(Runnable{ updateProgressBar() }, 200)
