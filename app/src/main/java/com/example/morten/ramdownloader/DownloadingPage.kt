@@ -20,15 +20,8 @@ class DownloadingPage : AppCompatActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        var GBsToDownload : Int = if (intent.getIntExtra("size", 10) == 10) {
-            intent.getIntExtra("size", 10)
-        }
-        else {
-            //intent.getIntExtra("size", 10)
-            //throw Exception("DownloadingPage's extra data was empty")
-            println("DownloadingPage's extra data was empty, sending bogus data")
-            intent.getIntExtra("size", 10)
-        };
+        // For some reason intent.extras.getInt("size") works but not intent.extras.getInt("size")
+        var GBsToDownload : Int = intent.extras.getInt("size")
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_download)
