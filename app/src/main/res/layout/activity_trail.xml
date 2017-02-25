@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/trail_notice"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:text="@string/trail"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/trail_notice"
+        android:text="@string/close"
+        android:textSize="30sp"/>
+
+
+</RelativeLayout>
