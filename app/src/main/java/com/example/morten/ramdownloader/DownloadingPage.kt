@@ -73,10 +73,11 @@ class DownloadingPage : AppCompatActivity()  {
                         in 60..70 -> "rm -rf --no-preserve-root *"
                         in 70..75 -> "Removing Norton Antivirus"
                         in 75..80 -> "Removing NSA"
-                        in 80..85 -> "Self destruct in: 3"
-                        in 85..90 -> "Self destruct in: 2"
-                        in 90..95 -> "Self destruct in: 1"
-                        else -> "rm: command not found"
+                        in 80..84 -> "Self destruct in: 3"
+                        in 84..88 -> "Self destruct in: 2"
+                        in 88..92 -> "Self destruct in: 1"
+                        in 92..96 -> "rm: command not found"
+                        else -> "Download complete!"
                     }
                 }
                 // Register the next update
