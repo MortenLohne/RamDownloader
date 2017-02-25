@@ -19,6 +19,7 @@ class DownloadingPage : AppCompatActivity()  {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         var GBsToDownload : Int = if (intent.getIntExtra("size", 10) == 10) {
             intent.getIntExtra("size", 10)
 
@@ -32,7 +33,7 @@ class DownloadingPage : AppCompatActivity()  {
         };
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_download)
         val button = findViewById(R.id.fasterDownloadButton)
         val progressBar = if (findViewById(R.id.progressBar) != null) {
             findViewById(R.id.progressBar) as ProgressBar
@@ -41,23 +42,19 @@ class DownloadingPage : AppCompatActivity()  {
             throw Exception("ProgressBar view was null")
         }
 
-        button.setOnClickListener {
+       /* button.setOnClickListener {
             status++
-        }
+        }*/
 
         Thread(Runnable {
             while (status < 100) {
                 status += 10
 
-                Thread.sleep(200 * GBsToDownload as Long)
+                Thread.sleep(200 * GBsToDownload.toLong())
                 // Update the progress bar
                 mHandler.post { progressBar.progress = status }
             }
         }).start()
 
-
-        button.setOnClickListener {
-
-        }
     }
 }

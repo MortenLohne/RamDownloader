@@ -12,7 +12,6 @@
         android:padding="10dp"
         android:layout_height="100dp"
         style="@android:style/Widget.ProgressBar.Horizontal"
-        android:progressDrawable="@color/colorPrimary"
         />
 
     <TextView

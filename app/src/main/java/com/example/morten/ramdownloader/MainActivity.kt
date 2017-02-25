@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
                 // If button is clicked several times, the button turns non-transparent 1000ms after the first click
                 kotlin.concurrent.thread {
                     Thread.sleep(1000);
-                    downloadButtons[i]?.alpha = 1.0.toFloat();
-                }.start()
+                    //downloadButtons[i]?.alpha = 1.0.toFloat();
+                }
             })
         }
 
