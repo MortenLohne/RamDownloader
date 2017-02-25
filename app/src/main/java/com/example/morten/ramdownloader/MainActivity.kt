@@ -4,9 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         // When a button is clicked, switch to the download screen
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
-                var intent = Intent(this as Context, DownloadingPage::class.java)
+                val intent = Intent(this as Context, DownloadingPage::class.java)
                 intent.putExtra("size", i)
                 startActivityForResult(intent, 1)
                 println("${i}GB button clicked!")
