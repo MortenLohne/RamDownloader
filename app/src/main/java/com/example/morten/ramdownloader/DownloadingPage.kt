@@ -44,7 +44,7 @@ class DownloadingPage : AppCompatActivity()  {
                 if (status >= 30 && status < 55) {
                     text1.text = "Installing Windows Phone"
                 } else if (status >= 55 && status < 80) {
-                    text1.text = "Set IE as default browser"
+                    text1.text = "Setting IE as default browser"
                 } else if (status >= 80 && status < 95) {
                     text1.text = "Removing Android"
                 } else if (status >= 95) {

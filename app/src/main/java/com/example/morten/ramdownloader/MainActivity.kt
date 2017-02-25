@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Get reference to download buttons
-        val downloadButtons = mutableMapOf(1 to findViewById(R.id.downloadButton1GB),
+        val downloadButtons = mutableMapOf(
+                1 to findViewById(R.id.downloadButton1GB),
                 2 to findViewById(R.id.downloadButton2GB),
                 4 to findViewById(R.id.downloadButton4GB),
                 8 to findViewById(R.id.downloadButton8GB),
