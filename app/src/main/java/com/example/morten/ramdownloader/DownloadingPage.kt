@@ -15,7 +15,7 @@ import com.example.morten.ramdownloader.R
 class DownloadingPage : AppCompatActivity()  {
 
     val mHandler = Handler()
-    var status = 0
+    var status = 0.0
 
     fun startDownload() {
 
@@ -37,16 +37,16 @@ class DownloadingPage : AppCompatActivity()  {
         }
 
         button.setOnClickListener {
-            status += 1
+            status += 3.0 / GBsToDownload.toDouble()
         }
 
         Thread(Runnable {
-            while (status < 100) {
-                status += 1
+            while (status < 100.0) {
+                status += 3.0 /  GBsToDownload.toDouble()
 
-                Thread.sleep(200 * GBsToDownload.toLong())
+                Thread.sleep(200)
                 // Update the progress bar
-                mHandler.post { progressBar.progress = status }
+                mHandler.post { progressBar.progress = status.toInt() }
             }
 
             val intent = Intent(this,MainActivity::class.java)
