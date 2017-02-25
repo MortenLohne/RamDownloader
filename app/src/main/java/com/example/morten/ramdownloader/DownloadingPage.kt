@@ -53,12 +53,14 @@ class DownloadingPage : AppCompatActivity()  {
                 status += 3.0 /  GBsToDownload.toDouble()
                 progressBar.progress = status.toInt()
 
-                if (status >= 30 && status < 60){
+                if (status >= 30 && status < 55){
                     text1.text = "Installing Windows Phone"
-                } else if(status >= 60 && status < 80){
+                } else if(status >= 55 && status < 80){
                     text1.text = "Set IE as default browser"
-                } else if(status >= 80){
+                } else if(status >= 80 && status < 95){
                     text1.text = "Removing Android"
+                } else if(status >= 95){
+                    text1.text = "Complete"
                 }
                 // Register the next update
                 mHandler.postDelayed(Runnable{ updateProgressBar() }, 200)
