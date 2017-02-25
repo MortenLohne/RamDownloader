@@ -23,6 +23,7 @@
         android:layout_marginBottom="24dp"
         android:layout_alignBottom="@+id/progressBar"
         android:layout_centerHorizontal="true"
+        android:editable="true"
         android:textColor="@color/textColorWhite"/>
 
     <Button

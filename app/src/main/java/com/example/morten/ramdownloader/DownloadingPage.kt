@@ -2,14 +2,18 @@ package com.example.morten.ramdownloader
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.text.Editable
 import android.view.View
+import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.example.morten.ramdownloader.R
+import org.w3c.dom.Text
 
 /**
  * Created by ady on 24/02/2017.
@@ -28,8 +32,7 @@ class DownloadingPage : AppCompatActivity()  {
 
         setContentView(R.layout.activity_download)
 
-        val text1 = findViewById(R.id.downloadingText) as TextView
-
+        var text1 = findViewById(R.id.downloadingText) as TextView
 
         // For some reason intent.extras.getInt("size") works but not intent.extras.getInt("size")
         var GBsToDownload : Int = intent.extras.getInt("size")
@@ -52,7 +55,7 @@ class DownloadingPage : AppCompatActivity()  {
             while (status < 100.0) {
                 status += 3.0 /  GBsToDownload.toDouble()
 
-                if (status > 30){
+                if (status > 30.0){
 
                 }
 
