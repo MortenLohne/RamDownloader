@@ -35,7 +35,7 @@
             android:textSize="20sp"
             android:text="@string/_1gb"
             android:textColor="@color/textColor"
-            android:padding="10dp"
+            android:padding="15dp"
 
             />
 
@@ -61,7 +61,7 @@
             android:textSize="20sp"
             android:text="@string/_2gb"
             android:textColor="@color/textColor"
-            android:padding="10dp"/>
+            android:padding="15dp"/>
 
         <Button
             android:id="@+id/downloadButton2GB"
@@ -86,7 +86,7 @@
             android:textSize="20sp"
             android:text="@string/_4gb"
             android:textColor="@color/textColor"
-            android:padding="10dp"/>
+            android:padding="15dp"/>
 
         <Button
             android:id="@+id/downloadButton4GB"
@@ -111,7 +111,7 @@
             android:textSize="20sp"
             android:text="@string/_8gb"
             android:textColor="@color/textColor"
-            android:padding="10dp"/>
+            android:padding="15dp"/>
 
         <Button
             android:id="@+id/downloadButton8GB"
@@ -131,6 +131,8 @@
         android:layout_height="40dp"
         android:textSize="25sp"
         android:textColor="@color/textColor"
+        android:layout_centerHorizontal="true"
+
         />
 
     <LinearLayout
