@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -22,23 +23,18 @@ class DownloadingPage : AppCompatActivity()  {
 
     val mHandler = Handler()
     var status = 0.0
-
     fun startDownload() {
 
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-
-        setContentView(R.layout.activity_download)
-
-        var text1 = findViewById(R.id.downloadingText) as TextView
-
         // For some reason intent.extras.getInt("size") works but not intent.extras.getInt("size")
         var GBsToDownload : Int = intent.extras.getInt("size")
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_download)
+        val text1 = findViewById(R.id.downloadingText)
         val button = findViewById(R.id.fasterDownloadButton)
         val progressBar = if (findViewById(R.id.progressBar) != null) {
             findViewById(R.id.progressBar) as ProgressBar
@@ -59,8 +55,8 @@ class DownloadingPage : AppCompatActivity()  {
 
 
                 if (status > 30){
-                    button.alpha = 0.3.toFloat()
-                    println("Button invisible!")
+                    text1.alpha = 0.0f
+                    button.alpha = 0.0f
                 }
                 // Register the next update
                 mHandler.postDelayed(Runnable{ updateProgressBar() }, 200)

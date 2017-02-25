@@ -18,6 +18,7 @@ class Trail : AppCompatActivity() {
 
        var button = findViewById(R.id.closeButton)
 
+
        button.setOnClickListener {
            var intent = Intent(this,MainActivity::class.java)
            startActivityForResult(intent,0)

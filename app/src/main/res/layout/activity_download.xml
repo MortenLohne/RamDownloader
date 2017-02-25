@@ -15,16 +15,16 @@
         />
 
     <TextView
+        android:paddingTop="30sp"
         android:id="@+id/downloadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/downloading_ram"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:layout_marginBottom="24dp"
-        android:layout_alignBottom="@+id/progressBar"
         android:layout_centerHorizontal="true"
-        android:editable="true"
-        android:textColor="@color/textColorWhite"/>
+        android:textColor="@color/textColorWhite"
+        />
 
     <Button
         android:id="@+id/fasterDownloadButton"
@@ -35,4 +35,5 @@
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
         />
+
 </RelativeLayout>
