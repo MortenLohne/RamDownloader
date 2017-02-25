@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         for (i in downloadButtons.keys) {
             downloadButtons[i]?.setOnClickListener ({
                 downloadButtons[i]?.alpha = 0.5.toFloat();
-                val dlPage = DownloadingPage();
                 var intent = Intent(this as Context, DownloadingPage::class.java)
                 intent.putExtra("size", i)
                 startActivityForResult(intent, 1)

@@ -22,10 +22,8 @@ class DownloadingPage : AppCompatActivity()  {
 
         var GBsToDownload : Int = if (intent.getIntExtra("size", 10) == 10) {
             intent.getIntExtra("size", 10)
-
         }
         else {
-
             //intent.getIntExtra("size", 10)
             //throw Exception("DownloadingPage's extra data was empty")
             println("DownloadingPage's extra data was empty, sending bogus data")
