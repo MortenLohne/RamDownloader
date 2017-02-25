@@ -42,13 +42,13 @@ class DownloadingPage : AppCompatActivity()  {
             throw Exception("ProgressBar view was null")
         }
 
-       /* button.setOnClickListener {
-            status++
-        }*/
+        button.setOnClickListener {
+            status += 1
+        }
 
         Thread(Runnable {
             while (status < 100) {
-                status += 10
+                status += 1
 
                 Thread.sleep(200 * GBsToDownload.toLong())
                 // Update the progress bar
