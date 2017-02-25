@@ -48,11 +48,15 @@ class DownloadingPage : AppCompatActivity()  {
                     progressBar.progress = status.toInt()
                     text1.text =
                     when (status) {
-                        in 0..30 -> "Downloading RAM"
-                        in 30..55 -> "Installing Windows Phone"
-                        in 55..80 ->"Setting IE as default browser"
-                        in 80..95 -> "Removing Android"
-                        else -> "Complete"
+                        in 0..15 -> "Downloading RAM"
+                        in 15..30 -> "Getting 7D bits"
+                        in 30..45 -> "Enabling RAM cloud"
+                        in 45..60 -> "Installing Windows Phone"
+                        in 60..70 -> "Setting IE as default browser"
+                        in 70..80 -> "Removing Android"
+                        in 80..90 -> "Removing Java"
+                        in 90..95 -> "Is there a god?"
+                        else -> "Congratulations! RAM acquired"
                     }
                 }
                 else {
@@ -61,14 +65,18 @@ class DownloadingPage : AppCompatActivity()  {
                     text1.text =
                     when (status) {
                         in 0..15 -> "Downloading storage"
-                        in 15..30 -> "Enabling monadic quantum bits"
-                        in 40..55 -> "sudo rm -rf *"
-                        in 55..70 -> "sudo rm -rf --no-preserve-root *"
-                        in 70..80 -> "Removing Norton anti-virus"
-                        in 80..85 -> "Removing NSA"
-                        in 85..90 -> "Self destruct in: 3"
-                        in 90..94 -> "Self destruct in: 2"
-                        else -> "Self destruct in: 1"
+                        in 15..25 -> "Getting monadic quantum bits"
+                        in 25..35 -> "Superclassing Object"
+                        in 35..50 -> "rm -rf *"
+                        in 50..55 -> "Backing up nudes"
+                        in 55..60 -> "Error: no morten@gmail.com"
+                        in 60..70 -> "rm -rf --no-preserve-root *"
+                        in 70..75 -> "Removing Norton Antivirus"
+                        in 75..80 -> "Removing NSA"
+                        in 80..85 -> "Self destruct in: 3"
+                        in 85..90 -> "Self destruct in: 2"
+                        in 90..95 -> "Self destruct in: 1"
+                        else -> "rm: command not found"
                     }
                 }
                 // Register the next update
