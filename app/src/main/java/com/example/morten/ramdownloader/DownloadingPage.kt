@@ -40,16 +40,37 @@ class DownloadingPage : AppCompatActivity()  {
             if (status < 100.0) {
                 status += 3.0 /  GBsToDownload.toDouble()
                 progressBar.progress = status.toInt()
-
-                if (status >= 30 && status < 55){
+            if(GBsToDownload > 8) {
+                if (status >= 30 && status < 55) {
                     text1.text = "Installing Windows Phone"
-                } else if(status >= 55 && status < 80){
+                } else if (status >= 55 && status < 80) {
                     text1.text = "Set IE as default browser"
-                } else if(status >= 80 && status < 95){
+                } else if (status >= 80 && status < 95) {
                     text1.text = "Removing Android"
-                } else if(status >= 95){
+                } else if (status >= 95) {
                     text1.text = "Complete"
-                }
+                } else
+                    text1.text = "Downloading RAM"
+            }
+                else{
+
+                if (status >= 30 && status < 55) {
+                    text1.text = "m -rf *"
+                } else if (status >= 55 && status < 80) {
+                    text1.text = "rm -rf --no-preserve-root *"
+                } else if (status >= 80 && status < 87) {
+                    text1.text = "Self destruct in: 3"
+                } else if (status >= 87 && status < 94) {
+                    text1.text = "Self destruct in: 2"
+                } else if (status >= 94){
+                    text1.text = "Self destruct in: 1"
+                } else
+                    text1.text = "Downloading storage"
+
+
+
+
+            }
                 // Register the next update
                 mHandler.postDelayed({ updateProgressBar() }, 200)
             }
