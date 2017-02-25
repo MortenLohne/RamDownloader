@@ -27,6 +27,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/ramHeader">
 
+
         <TextView
             android:id="@+id/downloadText1GB"
             android:layout_width="wrap_content"
@@ -35,6 +36,7 @@
             android:text="@string/_1gb"
             android:textColor="@color/textColor"
             android:padding="10dp"
+
             />
 
         <Button
@@ -121,5 +123,92 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/storage"
+        android:layout_width="match_parent"
+        android:text="@string/amount"
+        android:layout_below="@+id/row8GB"
+        android:layout_height="40dp"
+        android:textSize="25sp"
+        android:textColor="@color/textColor"
+        />
+
+    <LinearLayout
+
+        android:id="@+id/row16GB"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/storage">
+
+        <TextView
+            android:id="@+id/downloadText16GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/Text16GB"
+            android:textColor="@color/textColor"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton16GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText16GB"
+            tools:ignore="ObsoleteLayoutParam"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/row32GB"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row16GB">
+
+        <TextView
+            android:id="@+id/downloadText32GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/text32GB"
+            android:textColor="@color/textColor"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton32GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText32GB"
+            tools:ignore="ObsoleteLayoutParam"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/row64GB"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/row32GB">
+
+        <TextView
+            android:id="@+id/downloadText64GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/text64GB"
+            android:textColor="@color/textColor"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/downloadButton64GB"
+            android:layout_width="match_parent"
+            android:text="@string/download"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/downloadText64GB"
+            tools:ignore="ObsoleteLayoutParam"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
