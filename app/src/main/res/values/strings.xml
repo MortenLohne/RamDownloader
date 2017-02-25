@@ -4,7 +4,7 @@
     <string name="_1gb">1GB</string>
     <string name="_2gb">2GB</string>
     <string name="_4gb">4GB</string>
-    <string name="choose_the_amount_of_ram">Choose the amount of RAM</string>
+    <string name="choose_the_amount_of_ram">Choose amount of RAM</string>
     <string name="_8gb">8GB</string>
     <string name="downloading_ram">Downloading RAM</string>
     <string name="fast_download">Tap to download faster!</string>
@@ -12,7 +12,7 @@
     <string name="close">Close</string>
     <string name="windowsPhone">Downloading windows Phone</string>
     <string name="Text16GB">16GB</string>
-    <string name="amount">Choose the amount of storage</string>
+    <string name="amount">Choose amount of storage</string>
     <string name="text32GB">32GB</string>
     <string name="text64GB">64GB</string>
 </resources>
