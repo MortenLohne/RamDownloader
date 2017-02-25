@@ -48,7 +48,6 @@ class DownloadingPage : AppCompatActivity()  {
                 // Update the progress bar
                 mHandler.post { progressBar.progress = status }
             }
-
             val intent = Intent(this,MainActivity::class.java)
             startActivityForResult(intent,2)
 
