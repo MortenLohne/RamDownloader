@@ -51,22 +51,25 @@ class DownloadingPage : AppCompatActivity()  {
             status += 3.0 / GBsToDownload.toDouble()
         }
 
-        Thread(Runnable {
-            while (status < 100.0) {
+        // Function that gets called regularly to update the progress bar
+        fun updateProgressBar() {
+            if (status < 100.0) {
                 status += 3.0 /  GBsToDownload.toDouble()
+                progressBar.progress = status.toInt()
 
-                if (status > 30.0){
 
+                if (status > 30){
+                    button.alpha = 0.3.toFloat()
+                    println("Button invisible!")
                 }
-
-                Thread.sleep(200)
-                // Update the progress bar
-                mHandler.post { progressBar.progress = status.toInt() }
+                // Register the next update
+                mHandler.postDelayed(Runnable{ updateProgressBar() }, 200)
             }
-            val intent = Intent(this,MainActivity::class.java)
-            startActivityForResult(intent,2)
-
-        }).start()
-
+            else {
+                val intent = Intent(this,MainActivity::class.java)
+                startActivityForResult(intent,2)
+            }
+        }
+        updateProgressBar();
     }
 }
